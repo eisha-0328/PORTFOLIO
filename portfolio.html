@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eisha Shahzad | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* styles.css */
+
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      color: #493232;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    .top-header {
+      background-color: #113e2e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .top-header ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+    }
+
+    .top-header ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-color: #233825;
+      color: white;
+      position: relative;
+      padding: 3rem 1rem;
+      min-height:55vh;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: static;
+      margin: 0;
+      filter: brightness(80%);
+      order: 2;
+      border: none;
+
+    }
+
+    .content-wrapper {
+      order: 1;
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .item {
+      width: 300px;
+      height: 300px;
+      background-color: rgb(221, 119, 35);
+      position: absolute;
+      bottom: -300px;
+      right: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .portfolio-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .portfolio-title h1 {
+      font-size: 10em;
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin: 0;
+    }
+
+    .overlay-text h2 {
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #f8f5e4;
+    }
+
+    .overlay-text p {
+      font-size: 1rem;
+      margin-top: 1rem;
+      line-height: 1.4;
+      color: #f8f5e4;
+    }
+
+    .cta {
+      position: absolute;
+      bottom: -200px;
+      left: 30%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cta p {
+      background: #ff9651;
+      padding: 1.5rem 2rem;
+      font-family: 'Montserrat', sans-serif;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .cta button {
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      background-color: #1d1d1d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: transform 0.2s;
+    }
+
+    .cta button:hover {
+      transform: scale(1.05);
+    }
+
+    .about {
+      background-color: #fffdf6;
+      padding: 5rem 2rem;
+      text-align: center;
+      margin: 100px;
+      word-spacing: 1.5px;
+      letter-spacing: 1.5px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .experience {
+      border: 2px solid;
+      width: 600px;
+      height: 400px auto;
+      background-color: #ff9651;
+      position: absolute;
+      top: 1050px;
+      left: 650px;
+      z-index: 10;
+      text-align: center;
+      font-weight: bolder;
+      font-family: 'Playfair Display', serif;
+      word-spacing: 1.3px;
+      letter-spacing: 1.3px;
+      border-radius: 50px;
+      margin: 10px;
+      padding: 10px;
+      box-shadow: 0 5px 10px #2d442f;
+
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #ff703a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .education-experience {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #2d442f;
+      color: white;
+      padding: 4rem 6rem;
+      position: relative;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .education {
+      width: 45%;
+    }
+
+    .contact {
+      width: 45%;
+      text-align: left;
+    }
+
+    .contact h2 {
+      color: #ffd700;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .contact p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #f8f5e4;
+    }
+
+    .education h3 {
+      color: #ffd700;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .education ul {
+      list-style: none;
+      text-align: left;
+      padding: 0;
+    }
+
+    .education li {
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 30px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .education li::before {
+      content: "♦";
+      color: #ff9651;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+    .education li strong {
+      display: block;
+      color: #ff9651;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .education li span {
+      display: block;
+      color: #f8f5e4;
+      font-size: 1rem;
+      font-weight: normal;
+      margin-top: 0.3rem;
+    }
+
+    .experience {
+      width: 45%;
+      margin: 10px 0;
+      text-align: center;
+
+    }
+
+    .experience h3 {
+      color: #11110f;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+
+    .experience ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .experience li {
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 30px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .experience li::before {
+      content: "♦";
+      color: #ff9651;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+    .job-title {
+      color: #ff9651;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+      position: relative;
+      padding-left: 1px;
+    }
+
+    .job-period {
+      color: #0f0f0d;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .job-title::before {
+      content: "♦";
+      color: #f2f2f2;
+      position: absolute;
+      left: 10px;
+      font-size: 1.2rem;
+    }
+
+    .job-description {
+      color: #f8f5e4;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.6;
+      margin-top: 0.4rem;
+    }
+
+    .centre {
+      color: #f8f5e4;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .contact-skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 3rem 1rem;
+      background-color: #fffdf6;
+      color: #1d1d1d;
+    }
+
+    .pakistani {
+      border: 3px solid black;
+      border-radius: 20px;
+      width: 150px;
+      background-color: hsl(0, 0%, 0%);
+      color:rgb(247, 228, 22) ;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.1rem;
+      position: relative;
+      top: -350px;
+      left: 500px;
+    }
+    .date{
+      border: 3px solid black;
+      border-radius: 20px;
+      width: 150px;
+      background-color: hsl(0, 0%, 0%);
+      color:rgb(247, 228, 22) ;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.1rem;
+      position: relative;
+      top: -650px;
+      left: -50px;
+    }
+    .dev{
+      border: 3px solid black;
+      border-radius: 20px;
+      width: 200px;
+      background-color: hsl(0, 0%, 0%);
+      color:rgb(247, 228, 22) ;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.1rem;
+      position: relative;
+      top: -720px;
+      left: 400px;
+    }
+    .skills {
+      width: 45%;
+      margin: 1rem 0;
+
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-box {
+      background-color: #f5f0e6;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #233825;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .box {
+      margin: 10px;
+      border: 2px solid black;
+      padding: 10px;
+      /* flex-wrap: wrap; */
+      width: 10px;
+      height: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+
+    }
+
+    .contact button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #ff9651;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .extra {
+      display: none;
+    }
+
+    .languages,
+    .hobbies {
+      width: 40%;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+
+    .firststar {
+      position: absolute;
+      bottom: -40px;
+      right: -20px;
+      z-index: 10;
+      width: 70px;
+      height: 70px;
+      background-color: gold;
+      /* Star color */
+      clip-path: polygon(50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%);
+      animation: star-rotate 2s linear infinite;
+    }
+
+    @keyframes star-rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .fourth {
+      position: absolute;
+      bottom: -335px;
+      right: 250px;
+      z-index: 10;
+    }
+
+    .itemcircle {
+      border-radius: 50%;
+      background-color: #ff9651;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      bottom: -10px;
+      color: #fbfdff;
+      font-family: 'Montserrat', sans-serif;
+      left: 650px;
+      z-index: 10;
+      text-align: center;
+      padding-top: 20px;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .firsttittle {
+      position: absolute;
+      top: -40px;
+      left: 150px;
+      z-index: 10;
+    }
+
+    .tittle {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #233825;
+      -webkit-text-stroke: 3px #e6cd41;
+      text-shadow: 4px 4px 4px rgba(8, 5, 5, 0.5);
+      position: absolute;
+      top: 40px;
+      left: 150px;
+      z-index: 10;
+    }
+
+    .contact-info {
+      position: absolute;
+      top: 850px;
+      left: 660px;
+      padding: 10px 28px;
+      background-color: #1b1b1a;
+      color: #fff;
+      border-radius: 25px;
+      border: 2px solid;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      z-index: 20;
+      width: auto;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .contact-info.email {
+      top: 1300px;
+      left: 1150px;
+      margin: 17px;
+      padding: 10px;
+    }
+
+    .contact-info.linkedin {
+      top: 1100px;
+      margin: 20px;
+      padding: 15px;
+    }
+
+    .containerintro {
+      position: absolute;
+      top: 800px;
+      z-index: 10;
+      left: 665px;
+      border: 5px;
+      height: 300px;
+      width: 500px;
+    }
+
+    .pk {
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #1d1d1d;
+      color: white;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      border: 2px solid;
+      width: 100px;
+      height: 25px;
+      display: block;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="container">
+      <h1 class="logo">Eisha Shahzad</h1>
+      <nav>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="portfolio-title">
+      <div class="item">
+        <img src="Untitled (1).jpeg" alt="eisha-shahzad" class="hero-img">
+
+      </div>
+      <div class="firststar"></div>
+      <div class="firststar fourth"></div>
+      <h1 class="firsttittle">PORTFOLI</h1>
+      <h1 class="tittle">PORTFOLI</h1>
+
+    </div>
+    <div class="hero-content">
+
+      <div class="content-wrapper">
+        <div class="overlay-text">
+          <!-- <p>BE: @hanweb<br />IG: @hanweb<br />UI: @hanweb</p> -->
+        </div>
+        <div class="cta">
+          <p>Self-taught Fronted Web Developer.</p>
+          <button onclick="scrollToExperience()">View Portfolio</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="itemcircle">Scroll Down</div>
+  <section class="about" id="about">
+    <div class="containerintro">
+      <h2>Hello, I'm Eisha!</h2>
+      <p>Self-taught Web Developer from Karachi, trained at Aptech Pakistan. I build fast, mobile-friendly websites for
+        businesses—turning ideas into functional and appealing experiences.
+        I'm a quick learner and I'm always looking to improve my skills.</p>
+
+    </div>
+    <div class="skills">
+      <h3>Advanced Features</h3>
+      <div class="skills-grid">
+        <div class="skill-box">Carousel Animations (GSAP/Swiper.js) </div>
+        <div class="skill-box">Geolocation API (Google Maps, Leaflet) </div>
+        <div class="skill-box">SEO Optimization</div>
+
+      </div>
+      <h3>Tools</h3>
+      <div class="skills-grid">
+        <div class="skill-box">GitHub</div>
+
+      </div>
+
+
+      <h3>Technical Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-box">HTML5</div>
+        <div class="skill-box">CSS3</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">Bootstrap</div>
+        <div class="skill-box">jQuery</div>
+        <div class="skill-box">SEO</div>
+        <div class="skill-box">GitHub</div>
+        <div class="skill-box">JSON</div>
+        
+
+      </div>
+      
+      <div class="pakistani">#Pakistani</div>
+      <div class="date">#14/10/2005</div>
+      <div class="dev">#Front-End Developer</div>
+    </div>
+
+
+
+    <div class="experience">
+      <h3>Experience</h3>
+      <ul>
+        <li>
+          <div class="job-title">Frontend Web Developer</div>
+          <div class="job-period">Freelance | 2023 – Present</div>
+          <div class="job-description">
+            Built responsive websites using HTML, CSS, and JavaScript, focusing on clean UI and cross-browser
+            compatibility.
+            Implemented modern design principles to enhance user experience.
+            Collaborated with peers to debug code and optimize performance.
+          </div>
+        </li>
+        <li>
+          <div class="job-title">Student of the Month</div>
+          <div class="job-period">Aptech Pakistan | 2023</div>
+          <div class="job-description">
+            Recognized for top performance in academic projects and problem-solving skills.
+            Demonstrated leadership in group coding assignments and peer mentoring.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="education-experience" id="contact">
+    <div class="education">
+      <h3>Education</h3>
+
+      <ul>
+        <li><strong>2022-2024</strong> - Highbrow College</li>
+        <li><strong>2024-2025</strong> - Aptech Pakistan</li>
+        <li><strong>2025-2029</strong> - Dow University of Health Sciences</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>📍 Eisha Shahzad, Pakistan</p>
+      <p>📧 eishashahzad22@gmail.com</p>
+      <p>linkedin.com/in/eisha-shahzad</p>
+    </div>
+  </section>
+</body>
+
+<script>
+  function scrollToAbout() {
+    const aboutSection = document.getElementById('experience');
+    aboutSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+</script>
+
+</html>
