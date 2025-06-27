@@ -223,6 +223,9 @@
     .contact {
       width: 45%;
       text-align: left;
+      position: relative;
+      top: 125px;
+      left: 100px;
     }
 
     .contact h2 {
@@ -325,7 +328,20 @@
       position: relative;
       padding-left: 1px;
     }
-
+   .github{
+  color: #0c0a09;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+   .work{
+  color: #f5f0ed !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
     .job-period {
       color: #0f0f0d;
       font-size: 1rem;
@@ -620,7 +636,7 @@
       <h1 class="logo">Eisha Shahzad</h1>
       <nav>
         <ul>
-          <li><a href="#work">Work</a></li>
+          <li><a href="#work-section">Work</a></li>
           <li><a href="#about">About me</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -648,7 +664,7 @@
         </div>
         <div class="cta">
           <p>Self-taught Fronted Web Developer.</p>
-          <button onclick="scrollToExperience()">View Portfolio</button>
+          <button onclick="document.getElementById('work-section').scrollIntoView({behavior: 'smooth'});">View Work</button>
         </div>
       </div>
     </div>
@@ -722,9 +738,12 @@
         <li>
           <div class="github">My projects</div>
           <div class="link">
-            <a href="https://eisha-0328.github.io/Shrek-Juice/">GitHub</a>
-            <a href="https://eisha-0328.github.io/Shrek-Juice/">GitHub</a>
-            <a href="https://eisha-0328.github.io/Shrek-Juice/">GitHub</a>
+            <a href="#work-section" class="work" id="work-section">PORTFOLIO</a><br>
+            <a href="https://eisha-0328.github.io/Shrek-Juice/" class="work"> GITHUB LINK FOR MY PORTFOLIO</a><br>
+            <a href="https://eisha-0328.github.io/Project-01/about.html" class="work">PROJECT-01|SOLO PROJECT</a><br>
+            <a href="https://github.com/eisha-0328/Project-01.git" class="work"> GITHUB LINK FOR MY PROJECT-01</a><br>
+            <a href="https://eisha-0328.github.io/Shrek-Juice/" class="work">PROJECT-02|E-PROJECT</a><br>
+            <a href="https://github.com/eisha-0328/Shrek-Juice.git" class="work"> GITHUB LINK FOR MY PROJECT-02</a>
           </div>
       </ul>
     </div>
@@ -744,7 +763,7 @@
       <h2>Contact</h2>
       <p>📍 Eisha Shahzad, Pakistan</p>
       <p>📧 eishashahzad22@gmail.com</p>
-      <p>linkedin.com/in/eisha-shahzad</p>
+     <a href="www.linkedin.com/in/eisha-shahzad-b3b683369">linkedin.com/in/eisha-shahzad</a>
     </div>
   </section>
 </body>
